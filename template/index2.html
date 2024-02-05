@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>IT 444 </title>
+
+  
+</head>
+<body style="background-image: url('https://www.saintlukeskc.org/sites/default/files/styles/hero/public/2021-12/HeartFailure-WebPageImage.jpg?itok=FpucaCF8');background-size: cover">
+
+
+<center>
+	<div class="login" >
+		<br/>
+		<br/>
+		
+	<b><h1> ~ IT 444 ~  </h1></b> 
+	<b><h1> - Data Analytics and Mining  - </h1></b> 
+	 <br/>
+	 <h3>Take the first step towards a healthier heart with Healthcare – your trusted partner in cardiovascular wellness, providing valuable insights to empower you on your journey to better heart health.</h3>
+	 <br/>
+
+
+<b>
+		<form action="{{ url_for('predict')}}" method="post" style="background-image: url('https://img.freepik.com/free-photo/abstract-smooth-empty-grey-studio-well-use-as-background-business-report-digital-website-template-backdrop_1258-55967.jpg');background-size: center">
+
+		<h1> Prediction of Cardio Vascular Disease</h1><br>
+		
+		<table>
+				
+	
+			<tbody><tr>
+				<td>
+					Age:
+				</td>
+				<td>
+					<input type="number" name="age" id="age" placeholder="age(in years)" required="required">
+				</td>
+			</tr>
+					
+			<tr>
+				<td>		
+					Gender:
+				</td>
+				<td>
+					<input type="radio" id="male" name="gender" value="2">
+					<label for="male">Male</label>
+					<input type="radio" id="female" name="gender" value="1">
+					<label for="female">Female</label>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					Height:
+				</td>
+				<td>
+					<input type="text" name="height" placeholder="height(in cms)" required="required">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					Weight:
+				</td>
+				<td>
+					<input type="text" name="weight" placeholder="weight" required="required">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					Systolic blood pressure:
+				</td>
+				<td>
+					<input type="text" name="ap_hi" placeholder="Systolic blood pressure" required="required"><br>
+				</td>
+			</tr><tr>
+			</tr><tr>
+				<td>
+					Diastolic blood pressure:
+				</td>
+				<td>
+					<input type="text" name="ap_lo" placeholder="Diastolic blood pressure " required="required"><br>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>		
+					Cholesterol:
+				</td>
+				<td>
+					<input type="radio" name="cholesterol" value="1">
+					<label>Normal</label>
+					<input type="radio" name="cholesterol" value="2">
+					<label>Above Normal</label>
+					<input type="radio" name="cholesterol" value="3">
+					<label>Well Above Normal</label>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>		
+					Glucose:
+				</td>
+				<td>
+					<input type="radio" name="gluc" value="1">
+					<label>Normal</label>
+					<input type="radio" name="gluc" value="2">
+					<label>Above Normal</label>
+					<input type="radio" name="gluc" value="3">
+					<label>Well Above Normal</label>
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td>		
+					Smoking Habit:
+				</td>
+				<td>
+					<input type="radio" name="smoke" value="1">
+					<label>Yes</label>
+					<input type="radio" name="smoke" value="0">
+					<label>No</label>
+	
+				</td>
+			</tr>		
+			
+			
+			
+			<tr>
+				<td>		
+					Alcohol Habit:
+				</td>
+				<td>
+					<input type="radio" name="alco" value="1">
+					<label>Yes</label>
+					<input type="radio" name="alco" value="0">
+					<label>No</label>
+	
+				</td>
+			</tr>			
+			
+			
+			<tr>
+				<td>		
+					Physical Activity:
+				</td>
+				<td>
+					<input type="radio" name="active" value="1">
+					<label>Yes</label>
+					<input type="radio" name="active" value="0">
+					<label>No</label>
+	
+				</td>
+			</tr>	
+			
+			
+	
+			</tbody></table>
+			<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+
+			<center>   {{ prediction_text }}</center>
+		</form>
+	</b>		
+	
+	   <br>
+	   <br>
+	
+	
+	
+	 </div>		
+	 
+	</center>
+
+
+</body>
+</html>
